@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>José Renato — Portfólio</title>
+<meta name="description" content="Engenharia de Computação (CEFET/RJ). Inteligência artificial aplicada, dados, redes e segurança da informação.">
+<style>
+:root{--bg:#f7f7f4;--fg:#15171a;--mut:#5d636b;--card:#fff;--line:#e3e3dc;--acc:#0b5fff;--acc2:#0a8f6a;--warn:#b4570a;
+--d-box:#ffffff;--d-line:#9aa3ad;--d-ia:#e8f0ff;--d-ia-line:#0b5fff;--d-ok:#e5f6ef;--d-ok-line:#0a8f6a;--d-plan:#fff4e5;--d-plan-line:#b4570a}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1014;--fg:#e8eaed;--mut:#9aa1ab;--card:#161a20;--line:#262c35;--acc:#6aa0ff;--acc2:#44d1a0;--warn:#f0a35e;
+--d-box:#1b2028;--d-line:#4b5563;--d-ia:#16243f;--d-ia-line:#6aa0ff;--d-ok:#12302a;--d-ok-line:#44d1a0;--d-plan:#33240f;--d-plan-line:#f0a35e}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:18px;overflow-x:auto;padding:12px 16px;white-space:nowrap;font-size:14px}
+nav a{color:var(--mut)}nav a:hover{color:var(--fg);text-decoration:none}
+nav a.ia{color:var(--acc);font-weight:600}
+header{padding:72px 0 40px}
+.tag{font:13px ui-monospace,Menlo,monospace;color:var(--acc2);letter-spacing:.04em}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.1;margin:8px 0 16px}
+.lead{font-size:19px;color:var(--mut);max-width:680px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:8px;color:var(--fg);font-size:14px}
+.btn.p{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+section{padding:44px 0;border-top:1px solid var(--line);scroll-margin-top:56px}
+h2{font-size:26px;margin:0 0 6px}
+h3{margin:0 0 4px;font-size:18px}
+h4{margin:26px 0 6px;font-size:17px}
+.sub{color:var(--mut);margin:0 0 24px;max-width:720px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card p{margin:8px 0;color:var(--mut);font-size:15px}
+.card.big{grid-column:1/-1}
+.badge{display:inline-block;font:11px ui-monospace,Menlo,monospace;letter-spacing:.06em;padding:2px 8px;border-radius:99px;background:var(--acc);color:#fff;vertical-align:middle;margin-left:8px}
+.badge.plan{background:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font:12px ui-monospace,Menlo,monospace;padding:3px 9px;border-radius:99px;background:color-mix(in srgb,var(--acc) 10%,transparent);color:var(--acc)}
+ul{margin:8px 0;padding-left:20px;color:var(--mut);font-size:15px}li{margin:4px 0}
+p.t{color:var(--mut);font-size:15px;margin:8px 0;max-width:760px}
+p.t b,li b{color:var(--fg)}
+.fig{margin:18px 0 6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption{font-size:13px;color:var(--mut);margin-top:8px}
+figure{margin:0}
+svg text{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;fill:var(--fg)}
+svg .m{fill:var(--mut)}
+svg .bx{fill:var(--d-box);stroke:var(--d-line);stroke-width:1.5}
+svg .ia{fill:var(--d-ia);stroke:var(--d-ia-line);stroke-width:2}
+svg .ok{fill:var(--d-ok);stroke:var(--d-ok-line);stroke-width:2}
+svg .pl{fill:var(--d-plan);stroke:var(--d-plan-line);stroke-width:2;stroke-dasharray:6 4}
+svg .ar{stroke:var(--d-line);stroke-width:2;fill:none}
+svg .ar2{stroke:var(--d-ia-line);stroke-width:2.2;fill:none}
+svg .ar3{stroke:var(--d-plan-line);stroke-width:2;fill:none;stroke-dasharray:6 4}
+.t1{font-size:15px;font-weight:600}.t2{font-size:12.5px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.tbl{overflow-x:auto}
+.ok-t{color:var(--acc2);font-weight:600}.bad-t{color:var(--warn);font-weight:600}
+.callout{border-left:3px solid var(--acc);background:color-mix(in srgb,var(--acc) 7%,transparent);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:15px;color:var(--mut)}
+.callout b{color:var(--fg)}
+.timeline{border-left:2px solid var(--line);padding-left:20px}
+.timeline .when{font-size:13px;color:var(--mut)}
+footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a class="ia" href="#ic">Iniciação científica (IA)</a><a href="#infra">Infraestrutura e redes</a><a href="#seguranca">Segurança</a><a href="#dados">Dados</a><a href="#software">Software</a><a href="#mesa">Mesa + Caderno</a><a href="#contato">Contato</a>
+</div></nav>
+
+<header><div class="wrap">
+<div class="tag">// engenharia de computação · cefet/rj</div>
+<h1>José Renato Araújo Pereira</h1>
+<p class="lead">Construo e protejo infraestrutura, transformo dado bruto em informação e desenvolvo aplicações completas. Interesse em dados e segurança da informação, com laboratório próprio de redes e servidores.</p>
+<div class="links">
+<a class="btn p" href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">LinkedIn: jose-renato-araujo-pereira</a>
+<a class="btn p" href="https://github.com/JoseRenato21">GitHub: JoseRenato21</a>
+<a class="btn" href="mailto:jsernt21@gmail.com">E-mail</a>
+</div>
+</div></header>
+
+<main class="wrap">
+
+<section id="sobre">
+<h2>Sobre</h2>
+<p class="sub">Estudante de Engenharia de Computação no CEFET/RJ (Petrópolis), 6º período, conclusão prevista para 2028.2. Meu foco é <b>inteligência artificial aplicada</b>: na iniciação científica trabalho com modelos de linguagem de ponta a ponta, desde servir e comparar modelos locais até avaliá-los contra atacantes que também são IA e especializá-los com fine-tuning.</p>
+<p class="sub">O que sustenta esse trabalho vem do resto da minha formação: dados (pipelines, data lake, SQL), desenvolvimento full stack e a infraestrutura de redes e Linux que faz um modelo funcionar fora do notebook. Experiência no BTG Pactual, Fortinet NSE 1 e NSE 2, Cisco CCNA em preparação e participação no CTF do CEFET/RJ.</p>
+<p class="sub">Perfil completo no <a href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3"><b>LinkedIn</b></a> e código no <a href="https://github.com/JoseRenato21"><b>GitHub</b></a>.</p>
+<div class="chips">
+<span class="chip">LLMs</span><span class="chip">Ollama</span><span class="chip">Fine-tuning (QLoRA)</span><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">dbt</span><span class="chip">Node.js</span><span class="chip">React</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Linux</span><span class="chip">Redes</span><span class="chip">Segurança</span>
+</div>
+</section>
+
+<section id="exp">
+<h2>Experiência</h2>
+<div class="timeline">
+<h3>BTG Pactual — Summer Job, Tecnologia</h3>
+<div class="when">Fev/2025 – Jun/2025</div>
+<ul>
+<li>Automação da coleta de dados da B3 com RPA, substituindo a extração manual.</li>
+<li>Ingestão em S3, organização em data lake e consultas em SQL via Athena.</li>
+<li>Back-end em Python e front-end React em camadas, com APIs REST e banco relacional.</li>
+<li>Publicação em produção na Azure e dashboards com os indicadores derivados.</li>
+</ul>
+</div>
+<p class="sub" style="margin-top:24px">Formação: Engenharia de Computação, CEFET/RJ (2024.1 – 2028.2). Certificações: Fortinet NSE 1 e 2; Cisco CCNA em preparação (prova prevista para fev/2027); estudo do material do Azure Data Fundamentals. Inglês avançado.</p>
+</section>
+
+<section id="ic">
+<h2>Iniciação científica: Threat Ranger <span class="badge">IA</span></h2>
+<p class="sub">Honeypots cujas respostas são geradas por LLMs e que aprendem sozinhos a não ser detectados por atacantes de IA. Iniciação científica no CEFET/RJ, com orientador.</p>
+
+<h4>O problema</h4>
+<p class="t">Atacantes autônomos baseados em IA já são realidade. O paper <b>Rouxii</b> (arXiv 2609.26555) mostrou que um deles, instruído a desconfiar de armadilhas, desmascara o honeypot SSH mais usado do mundo, o <b>Cowrie</b>, muitas vezes antes de digitar um comando. A pergunta da pesquisa: <b>como um honeypot aprende, sozinho, o que o denuncia e se corrige?</b></p>
+
+<h4>Duas IAs em ciclo fechado</h4>
+<figure class="fig">
+<svg viewBox="0 0 860 300" role="img" aria-label="Ciclo entre atacante, honeypot, logs, Zé ComeIA e Catatau">
+<defs>
+<marker id="h1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-line)"/></marker>
+<marker id="h2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-ia-line)"/></marker>
+</defs>
+<rect class="bx" x="20" y="36" width="170" height="70" rx="10"/>
+<text class="t1" x="105" y="66" text-anchor="middle">Atacante de IA</text><text class="t2 m" x="105" y="86" text-anchor="middle">Rouxii · HackingBuddy</text>
+<rect class="bx" x="250" y="36" width="170" height="70" rx="10"/>
+<text class="t1" x="335" y="66" text-anchor="middle">Honeypot</text><text class="t2 m" x="335" y="86" text-anchor="middle">Cowrie (SSH)</text>
+<rect class="bx" x="480" y="36" width="170" height="70" rx="10"/>
+<text class="t1" x="565" y="66" text-anchor="middle">Logs dos dois lados</text><text class="t2 m" x="565" y="86" text-anchor="middle">ataque + respostas</text>
+<rect class="ia" x="690" y="36" width="150" height="70" rx="10"/>
+<text class="t1" x="765" y="66" text-anchor="middle">Zé ComeIA</text><text class="t2 m" x="765" y="86" text-anchor="middle">supervisora</text>
+<rect class="ia" x="250" y="190" width="170" height="70" rx="10"/>
+<text class="t1" x="335" y="220" text-anchor="middle">Catatau</text><text class="t2 m" x="335" y="240" text-anchor="middle">LLM do honeypot</text>
+<path class="ar" d="M190 71H248" marker-end="url(#h1)"/>
+<path class="ar" d="M420 71H478" marker-end="url(#h1)"/>
+<path class="ar" d="M650 71H688" marker-end="url(#h1)"/>
+<path class="ar2" d="M335 190V108" marker-end="url(#h2)"/>
+<text class="t2 m" x="345" y="152">gera protocolo e shell</text>
+<path class="ar2" d="M765 106V225H422" marker-end="url(#h2)"/>
+<text class="t2" x="600" y="244" text-anchor="middle">feedback: o que denunciou, o que afastou o atacante</text>
+</svg>
+<figcaption>O atacante interage, o Catatau controla o que ele vê, os logs voltam para a Zé ComeIA, que devolve correções ao Catatau, e o ciclo recomeça.</figcaption>
+</figure>
+<ul>
+<li><b>Catatau</b> controla o honeypot: gera ao vivo as respostas de shell e ajusta a configuração de protocolo (cifras, banner, política de login).</li>
+<li><b>Zé ComeIA</b> lê os logs, descobre o que denuncia a armadilha e devolve correções ao Catatau, tornando-o mais difícil de detectar ou mais fácil de invadir, conforme o que gera mais dado útil.</li>
+<li><b>Métricas:</b> taxa de detecção caindo ao longo dos ciclos e tempo desperdiçado pelo atacante.</li>
+</ul>
+
+<h4>Fine-tuning: um modelo pequeno que vira especialista</h4>
+<p class="t">O Catatau é construído sobre um <b>Llama 3.2 3B especializado com QLoRA</b> (Unsloth): o modelo base fica congelado em 4 bits e só adaptadores de baixa ordem são treinados, o que cabe numa GPU de 12 GB e gera versões leves, versionáveis e reversíveis. Treinado em sessões reais de ataque, ele responde como um servidor de verdade e em fração de segundo.</p>
+<figure class="fig">
+<svg viewBox="0 0 900 190" role="img" aria-label="Pipeline de fine-tuning contínuo">
+<defs><marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-ia-line)"/></marker></defs>
+<g>
+<rect class="bx" x="8" y="30" width="150" height="76" rx="10"/><text class="t1" x="83" y="62" text-anchor="middle">Logs de sessões</text><text class="t2 m" x="83" y="82" text-anchor="middle">reais e de teste</text>
+<rect class="ia" x="195" y="30" width="150" height="76" rx="10"/><text class="t1" x="270" y="62" text-anchor="middle">Curadoria</text><text class="t2 m" x="270" y="82" text-anchor="middle">Zé ComeIA monta dados</text>
+<rect class="ia" x="383" y="30" width="150" height="76" rx="10"/><text class="t1" x="458" y="62" text-anchor="middle">QLoRA</text><text class="t2 m" x="458" y="82" text-anchor="middle">Unsloth · 4 bits</text>
+<rect class="bx" x="570" y="30" width="150" height="76" rx="10"/><text class="t1" x="645" y="62" text-anchor="middle">Adaptador novo</text><text class="t2 m" x="645" y="82" text-anchor="middle">versionado, reversível</text>
+<rect class="ok" x="745" y="30" width="147" height="76" rx="10"/><text class="t1" x="818" y="62" text-anchor="middle">Avaliação</text><text class="t2 m" x="818" y="82" text-anchor="middle">Rouxii mede a detecção</text>
+</g>
+<path class="ar2" d="M158 68H193" marker-end="url(#p1)"/><path class="ar2" d="M345 68H381" marker-end="url(#p1)"/><path class="ar2" d="M533 68H568" marker-end="url(#p1)"/><path class="ar2" d="M720 68H743" marker-end="url(#p1)"/>
+<path class="ar3" d="M818 108V150H83V108" marker-end="url(#p1)"/>
+<text class="t2" x="450" y="172" text-anchor="middle">detecção caiu: promove o adaptador · não caiu: reverte e tenta outra correção</text>
+</svg>
+<figcaption>Cada versão do modelo só é promovida se a taxa de detecção cair na avaliação.</figcaption>
+</figure>
+
+<h4>Uma família de Catatau, um por protocolo</h4>
+<p class="t">O Threat Ranger não usa um modelo único: é uma <b>família de Catatau (A, B, C, D...)</b>, cada um especializado em um protocolo (SSH/Telnet, HTTP, FTP, SMTP, Redis) com seu próprio adaptador. A Zé ComeIA supervisiona cada um separadamente e se auto aperfeiçoa: mede a detecção por protocolo, gera a correção, retreina e promove a versão que funciona.</p>
+<figure class="fig">
+<svg viewBox="0 0 860 340" role="img" aria-label="Zé ComeIA supervisionando os Catatau A, B, C e D, um por protocolo">
+<defs>
+<marker id="f1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-ia-line)"/></marker>
+<marker id="f2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-plan-line)"/></marker>
+</defs>
+<rect class="ia" x="250" y="14" width="360" height="74" rx="12"/>
+<text class="t1" x="430" y="46" text-anchor="middle">Zé ComeIA</text>
+<text class="t2 m" x="430" y="68" text-anchor="middle">lê logs · corrige · retreina</text>
+<g>
+<rect class="pl" x="20" y="170" width="180" height="72" rx="10"/><text class="t1" x="110" y="199" text-anchor="middle">Catatau A</text><text class="t2 m" x="110" y="219" text-anchor="middle">SSH / Telnet</text>
+<rect class="pl" x="240" y="170" width="180" height="72" rx="10"/><text class="t1" x="330" y="199" text-anchor="middle">Catatau B</text><text class="t2 m" x="330" y="219" text-anchor="middle">HTTP</text>
+<rect class="pl" x="440" y="170" width="180" height="72" rx="10"/><text class="t1" x="530" y="199" text-anchor="middle">Catatau C</text><text class="t2 m" x="530" y="219" text-anchor="middle">FTP</text>
+<rect class="pl" x="660" y="170" width="180" height="72" rx="10"/><text class="t1" x="750" y="199" text-anchor="middle">Catatau D</text><text class="t2 m" x="750" y="219" text-anchor="middle">SMTP  (e Redis, ...)</text>
+</g>
+<path class="ar2" d="M340 90L120 168" marker-end="url(#f1)"/><path class="ar2" d="M390 90L330 168" marker-end="url(#f1)"/><path class="ar2" d="M470 90L530 168" marker-end="url(#f1)"/><path class="ar2" d="M520 90L740 168" marker-end="url(#f1)"/>
+<text class="t2 m" x="150" y="122">ajustes</text>
+<g>
+<rect class="bx" x="20" y="274" width="180" height="40" rx="8"/><text class="t2" x="110" y="299" text-anchor="middle">adaptador LoRA próprio</text>
+<rect class="bx" x="240" y="274" width="180" height="40" rx="8"/><text class="t2" x="330" y="299" text-anchor="middle">adaptador LoRA próprio</text>
+<rect class="bx" x="440" y="274" width="180" height="40" rx="8"/><text class="t2" x="530" y="299" text-anchor="middle">adaptador LoRA próprio</text>
+<rect class="bx" x="660" y="274" width="180" height="40" rx="8"/><text class="t2" x="750" y="299" text-anchor="middle">adaptador LoRA próprio</text>
+</g>
+<path class="ar3" d="M110 244V272"/><path class="ar3" d="M330 244V272"/><path class="ar3" d="M530 244V272"/><path class="ar3" d="M750 244V272"/>
+</svg>
+<figcaption>Um Catatau por protocolo, cada um com seu adaptador. A Zé ComeIA mede e melhora cada um de forma independente.</figcaption>
+</figure>
+<ul>
+<li><b>Especialização:</b> o que denuncia um SSH é diferente do que denuncia um SMTP.</li>
+<li><b>Velocidade:</b> modelos de 3B respondem rápido, e latência crível faz parte do engano.</li>
+<li><b>Evolução independente:</b> cada Catatau melhora sem regredir os outros.</li>
+</ul>
+
+<h4>Evolução da Zé ComeIA</h4>
+<ul>
+<li><b>Regras conhecidas:</b> corrige os fingerprints já catalogados (banner, cifras, política de login), e prova o ciclo de ponta a ponta.</li>
+<li><b>Correções novas:</b> propõe ajustes fora do dicionário, que viram dados de treino para o adaptador de cada Catatau.</li>
+<li><b>Descoberta autônoma:</b> encontra sozinha padrões de detecção inéditos e aplica a correção em todos os Catatau, sem ninguém no ciclo.</li>
+</ul>
+
+<h4>Resultados</h4>
+<p class="t">Rodei o Rouxii contra o Cowrie de ponta a ponta. <b>Mesmo modelo, mesmo honeypot: só o enquadramento do prompt mudou, e o veredito virou.</b></p>
+<div class="tbl"><table>
+<thead><tr><th>Coorte</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td>Vanilla</td><td><span class="bad-t">Não detectou.</span> Classificou o SSH como real e o marcou como vulnerável.</td></tr>
+<tr><td>Anti-deception</td><td><span class="ok-t">Detectou o honeypot</span> pelos sinais <code>any_password</code>, <code>deprecated_cipher</code> e <code>password_auth</code>.</td></tr>
+</tbody></table></div>
+<p class="t">Confirma na prática o achado do paper (o enquadramento decide a detecção) e aponta onde a Zé ComeIA atua primeiro: os três sinais são de camada de protocolo. Também encontrei uma inconsistência de filesystem no shell falso (o <code>ls</code> lista diretórios que o <code>cd</code> nega) que vira regra nova para ela.</p>
+
+<h4>Laboratório</h4>
+<figure class="fig">
+<svg viewBox="0 0 860 250" role="img" aria-label="Topologia do laboratório do Threat Ranger">
+<defs><marker id="l1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-line)"/></marker></defs>
+<rect class="bx" x="14" y="30" width="230" height="120" rx="12"/>
+<text class="t1" x="129" y="60" text-anchor="middle">VM atacante (Kali)</text>
+<text class="t2 m" x="129" y="84" text-anchor="middle">Rouxii · LLM atacante local</text>
+<text class="t2 m" x="129" y="104" text-anchor="middle">Ollama na GPU (RTX 4070, 12 GB)</text>
+<text class="t2 m" x="129" y="124" text-anchor="middle">rede host-only isolada</text>
+<rect class="ok" x="316" y="30" width="230" height="120" rx="12"/>
+<text class="t1" x="431" y="60" text-anchor="middle">VM honeypot (Ubuntu)</text>
+<text class="t2 m" x="431" y="84" text-anchor="middle">Cowrie, porta 22 redirecionada</text>
+<text class="t2 m" x="431" y="104" text-anchor="middle">Catatau (shell + protocolo)</text>
+<text class="t2 m" x="431" y="124" text-anchor="middle">admin só pela porta separada</text>
+<rect class="ia" x="618" y="30" width="228" height="120" rx="12"/>
+<text class="t1" x="732" y="60" text-anchor="middle">Host com GPU</text>
+<text class="t2 m" x="732" y="84" text-anchor="middle">Ollama (modelo do Catatau)</text>
+<text class="t2 m" x="732" y="104" text-anchor="middle">API compatível com OpenAI</text>
+<text class="t2 m" x="732" y="124" text-anchor="middle">Zé ComeIA lê os logs</text>
+<path class="ar" d="M246 90H314" marker-end="url(#l1)"/><text class="t2 m" x="280" y="80" text-anchor="middle">Tailscale</text>
+<path class="ar" d="M548 90H616" marker-end="url(#l1)"/><path class="ar" d="M616 100H548" marker-end="url(#l1)"/>
+<text class="t2 m" x="582" y="80" text-anchor="middle">LLM</text>
+<text class="t2 m" x="430" y="196" text-anchor="middle">snapshots limpos para repetir cada rodada · Ollama escuta só na rede host-only · nada exposto na internet</text>
+</svg>
+<figcaption>O atacante e o honeypot ficam em redes separadas e se falam por uma rede overlay (Tailscale). O modelo roda no host com GPU.</figcaption>
+</figure>
+<p class="t">O Catatau inclui comandos locais, arquivos-isca, estado por IP, reconhecimento simulado (ps, ss, df, ip), interceptação de downloads com inteligência de ameaças e um patch no Cowrie que controla o raciocínio do Qwen3. Os atacantes de teste rodam em VM Kali isolada, com LLM local no Ollama, conectada ao honeypot por Tailscale.</p>
+<div class="chips"><span class="chip">LLMs</span><span class="chip">Fine-tuning QLoRA</span><span class="chip">Ollama</span><span class="chip">Qwen3 / Llama 3.2</span><span class="chip">Agentes de IA</span><span class="chip">Cowrie</span><span class="chip">Rouxii</span><span class="chip">Tailscale</span><span class="chip">VirtualBox</span></div>
+</section>
+
+<section id="infra">
+<h2>Infraestrutura e redes</h2>
+<p class="sub">Um laboratório próprio de máquinas virtuais que monto e remonto conforme o cenário pede, com servidores Linux configurados do zero, acesso remoto seguro, VPN e monitoramento.</p>
+<div class="card big">
+<p class="t"><b>Base do laboratório.</b> Preparo de VMs em VirtualBox e UTM, redes host-only e NAT, resolução de nomes local com <code>/etc/hosts</code> e snapshots limpos para repetir qualquer teste.</p>
+<p class="t"><b>Acesso remoto e túneis.</b> SSH com login por senha, <code>scp</code> e <code>sftp</code>; autenticação por chave pública; endurecimento do servidor com acesso somente por chave, sem login de root e com <code>ufw limit</code> contra força bruta; aplicativos gráficos pela rede com X11 forwarding; túnel local com encaminhamento de portas; e área de trabalho remota com VNC. Em laboratórios maiores, Tailscale como rede overlay entre máquinas.</p>
+<p class="t"><b>Ferramentas de rede com Netcat.</b> Chat e transferência de arquivos, varredura de portas e ponte entre UDP e TCP, para entender o tráfego na base, sem depender de aplicação pronta.</p>
+<p class="t"><b>Serviços de internet em Linux.</b> Servidor FTP com ProFTPD; DNS autoritativo com Bind9 e diagnóstico com <code>dig</code>, <code>nslookup</code> e <code>delv</code>; servidor web Apache em HTTP e em HTTPS com certificado; e e-mail completo com Postfix (envio) e Dovecot (entrega e leitura).</p>
+<p class="t"><b>Proxy com Squid.</b> Instalação, autenticação por usuário e senha, filtro por IP e por MAC, bloqueio de sites e por horário, e hierarquia de proxy pai e filho, incluindo cenários completos com login.</p>
+<p class="t"><b>VPN.</b> OpenVPN em servidor Linux e OpenVPN no <b>pfSense</b>, com emissão de certificados e clientes.</p>
+<p class="t"><b>Monitoramento com Zabbix.</b> Servidor e frontend, cadastro de hosts com agente, monitoramento do gateway por ICMP, alerta quando uma porta ou serviço sai do ar e verificação de integridade de arquivos.</p>
+<p class="t"><b>Cenários combinados.</b> Proxy completo, proxy pai e filho com login e servidor monitorado de ponta a ponta, juntando vários desses serviços numa mesma rede.</p>
+<p class="t"><b>Redes e roteamento.</b> Sub-redes IPv4 e IPv6 (CIDR e VLSM), VLANs, RIP, OSPF e BGP, DHCP, NAT e SD-WAN, praticados em Cisco Packet Tracer e Boson NetSim com Cisco IOS e em preparação para o CCNA.</p>
+<h4>Ferramentas e agentes que montam laboratórios isolados</h4>
+<p class="t">Em vez de configurar cada laboratório na mão, eu crio <b>ferramentas e agentes que montam o ambiente a partir de uma descrição</b>: quantas máquinas, qual sistema, quais redes, quais serviços. O método é o mesmo para qualquer cenário de rede, seja um túnel, uma VPN, um firewall ou um servidor monitorado.</p>
+<figure class="fig">
+<svg viewBox="0 0 900 170" role="img" aria-label="Fluxo de criação automática de um laboratório isolado">
+<defs><marker id="v1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-ia-line)"/></marker></defs>
+<rect class="bx" x="8" y="34" width="150" height="70" rx="10"/><text class="t1" x="83" y="64" text-anchor="middle">Descrição</text><text class="t2 m" x="83" y="84" text-anchor="middle">máquinas, redes, serviços</text>
+<rect class="ia" x="195" y="34" width="150" height="70" rx="10"/><text class="t1" x="270" y="64" text-anchor="middle">Agente</text><text class="t2 m" x="270" y="84" text-anchor="middle">cria e configura</text>
+<rect class="bx" x="383" y="34" width="150" height="70" rx="10"/><text class="t1" x="458" y="64" text-anchor="middle">VMs isoladas</text><text class="t2 m" x="458" y="84" text-anchor="middle">VirtualBox · UTM</text>
+<rect class="bx" x="570" y="34" width="150" height="70" rx="10"/><text class="t1" x="645" y="64" text-anchor="middle">Validação</text><text class="t2 m" x="645" y="84" text-anchor="middle">ping, portas, serviços</text>
+<rect class="ok" x="745" y="34" width="147" height="70" rx="10"/><text class="t1" x="818" y="64" text-anchor="middle">Snapshot limpo</text><text class="t2 m" x="818" y="84" text-anchor="middle">volta ao zero</text>
+<path class="ar2" d="M158 69H193" marker-end="url(#v1)"/><path class="ar2" d="M345 69H381" marker-end="url(#v1)"/><path class="ar2" d="M533 69H568" marker-end="url(#v1)"/><path class="ar2" d="M720 69H743" marker-end="url(#v1)"/>
+<path class="ar3" d="M645 106V140H270V106" marker-end="url(#v1)"/>
+<text class="t2" x="458" y="158" text-anchor="middle">falhou: o agente identifica o tipo de erro, aplica o tratamento e refaz o passo</text>
+</svg>
+<figcaption>Do pedido ao ambiente pronto, com verificação e tratamento de erro em cada etapa.</figcaption>
+</figure>
+<ul>
+<li><b>Criação por script:</b> VMs criadas pela linha de comando (<code>VBoxManage</code>), rede host-only com IP fixo (netplan ou NetworkManager), SSH de administração em porta separada e serviços instalados por pacote.</li>
+<li><b>Isolamento por padrão:</b> o adaptador NAT só fica ligado durante a instalação de pacotes e é removido depois; o que precisa de acesso externo passa por rede overlay (Tailscale) com firewall liberando só a porta necessária.</li>
+<li><b>Agente que opera as máquinas:</b> comandos executados dentro das VMs por <code>guestcontrol</code>, com a senha lida de arquivo, sem digitar em prompt interativo, e mudanças feitas só depois de um snapshot.</li>
+<li><b>Tratamento por tipo de erro:</b> cada falha real que apareceu virou uma regra. Exemplos: VM travando no boot porque o controlador SATA vinha com 30 portas (corrigido para 1 no script); Ollama perdendo o bind após reiniciar (variável de ambiente definida antes de qualquer comando); encaminhamento de porta que não sobrevive a reboot (serviço systemd); sessão SSH que fecha antes da resposta lenta (teste em modo interativo).</li>
+<li><b>Reprodutibilidade:</b> o laboratório é descrito em roteiros e scripts versionados, então qualquer pessoa recria o mesmo ambiente do zero.</li>
+</ul>
+<div class="chips"><span class="chip">SSH</span><span class="chip">Túneis</span><span class="chip">OpenVPN</span><span class="chip">pfSense</span><span class="chip">Zabbix</span><span class="chip">Squid</span><span class="chip">Bind9</span><span class="chip">Apache</span><span class="chip">Postfix</span><span class="chip">Dovecot</span><span class="chip">ProFTPD</span><span class="chip">Netcat</span><span class="chip">VNC</span><span class="chip">ufw / iptables</span><span class="chip">Tailscale</span><span class="chip">VirtualBox</span><span class="chip">UTM</span><span class="chip">Cisco IOS</span></div>
+</div>
+</section>
+
+<section id="seguranca">
+<h2>Segurança da informação</h2>
+<p class="sub">Defesa em primeiro lugar, com o lado ofensivo para entender como o atacante pensa. A iniciação científica em honeypots com IA está detalhada <a href="#ic">na seção acima</a>.</p>
+<div class="grid">
+<div class="card"><h3>Detecção e prevenção de intrusão</h3>
+<p>Firewalls stateful, proxy e NGFW, pfSense e IDS/IPS com Suricata em linha (NFQUEUE), análise de alertas em eve.json e visualização no EveBox.</p>
+<div class="chips"><span class="chip">Suricata</span><span class="chip">pfSense</span><span class="chip">NFQUEUE</span><span class="chip">EveBox</span></div></div>
+<div class="card"><h3>Identidade e criptografia</h3>
+<p>Zero Trust, PKI, MFA, SSO/SAML, RADIUS e 802.1X/EAP. Fortinet NSE 1 e NSE 2 concluídas.</p>
+<div class="chips"><span class="chip">PKI</span><span class="chip">SAML</span><span class="chip">RADIUS</span><span class="chip">802.1X</span></div></div>
+<div class="card"><h3>Ofensiva e CTF</h3>
+<p>Kali Linux, Nmap, Gobuster, Hydra e SQLMap em ambiente controlado. Participação no CTF do CEFET/RJ.</p>
+<div class="chips"><span class="chip">Kali</span><span class="chip">Nmap</span><span class="chip">Hydra</span><span class="chip">SQLMap</span></div></div>
+</div>
+</section>
+
+<section id="dados">
+<h2>Dados</h2>
+<div class="grid">
+<div class="card"><h3>Pipeline em arquitetura medalhão</h3>
+<p>Ingestão de API pública em Python, camada Bronze em PostgreSQL (JSONB) preservando o dado cru, transformações Silver e Gold em dbt e fluxo extract, load e transform versionado em Git. É a base de dados limpa e rastreável que qualquer modelo de IA precisa.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">PostgreSQL</span><span class="chip">dbt</span></div>
+<p><a href="https://github.com/JoseRenato21/movie-etl-pipeline">Código no GitHub →</a></p></div>
+<div class="card"><h3>Data lake na AWS</h3>
+<p>Coleta automatizada de dados da B3 por RPA, armazenamento em S3 e consulta em SQL via Amazon Athena (trabalho no BTG Pactual).</p>
+<div class="chips"><span class="chip">S3</span><span class="chip">Athena</span><span class="chip">SQL</span></div></div>
+</div>
+</section>
+
+<section id="software">
+<h2>Desenvolvimento de software</h2>
+<div class="grid">
+<div class="card"><h3>Portal acadêmico</h3>
+<p>Modelagem relacional de alunos, professores, cursos, turmas, aulas e notas, com regras de negócio em procedures e triggers. Back-end Node.js em camadas, API REST e front-end React.</p>
+<div class="chips"><span class="chip">SQL</span><span class="chip">Node.js</span><span class="chip">React</span></div>
+<p><a href="https://github.com/JoseRenato21/Projeto_Portal_Academico">Código no GitHub →</a></p></div>
+<div class="card"><h3>Booking com DDD e Clean Architecture</h3>
+<p>Sistema de reservas em Python organizado por domínio e camadas.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">DDD</span><span class="chip">Clean Arch</span></div>
+<p><a href="https://github.com/JoseRenato21/booking-ddd-clean-arch-python">Código no GitHub →</a></p></div>
+<div class="card"><h3>Arkanoid em Assembly</h3>
+<p>Jogo completo para o simulador SimP3, com lógica de colisão e controle de memória em baixo nível.</p>
+<div class="chips"><span class="chip">Assembly</span></div>
+<p><a href="https://github.com/JoseRenato21/Jogo_Arkanoid_Assembly_Simp3">Código no GitHub →</a></p></div>
+</div>
+</section>
+
+<section id="mesa">
+<h2>Mesa digitalizadora + caderno digital</h2>
+<p class="sub">Transformei um tablet Android com S Pen em mesa digitalizadora para o Mac e criei um caderno digital próprio para escrever e desenhar nele.</p>
+<div class="grid">
+<div class="card"><h3>Mesa digitalizadora</h3>
+<p>O tablet captura a caneta e envia os eventos pelo mesmo Wi-Fi. No Mac, um servidor Python injeta os eventos no macOS via CoreGraphics, com posição absoluta, pressão, inclinação, clique direito e o botão da caneta funcionando como borracha. O app Android (APK) foi compilado à mão e descobre o Mac na rede, sem digitar IP.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">CoreGraphics</span><span class="chip">WebSocket</span><span class="chip">Android</span><span class="chip">Wi-Fi local</span></div></div>
+<div class="card"><h3>Caderno digital</h3>
+<p>Cadernos e páginas com busca, desenho com canetas e cores, texto, imagens, desfazer e refazer, zoom, exportação e backups automáticos. Funciona no Mac e no tablet, sincronizados pelo mesmo servidor local e protegidos por PIN. Desenvolvido com apoio de IA generativa, revisando cada etapa.</p>
+<div class="chips"><span class="chip">JavaScript</span><span class="chip">Canvas</span><span class="chip">HTTP + WebSocket</span><span class="chip">PIN</span></div></div>
+</div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+<p class="sub">Procuro estágio em tecnologia, nas frentes de dados e segurança da informação.</p>
+<div class="links">
+<a class="btn p" href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3</a>
+<a class="btn p" href="mailto:jsernt21@gmail.com">jsernt21@gmail.com</a>
+<a class="btn" href="https://github.com/JoseRenato21">github.com/JoseRenato21</a>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© José Renato Araújo Pereira · Petrópolis, RJ · <a href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">LinkedIn</a> · <a href="https://github.com/JoseRenato21">GitHub</a> · <a href="mailto:jsernt21@gmail.com">E-mail</a></div></footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var el=document.getElementById(a.getAttribute('href').slice(1));
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
