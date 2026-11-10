@@ -66,12 +66,17 @@ th{color:var(--mut);font-weight:600;font-size:12px;letter-spacing:.04em;text-tra
 .callout b{color:var(--fg)}
 .timeline{border-left:2px solid var(--line);padding-left:20px}
 .timeline .when{font-size:13px;color:var(--mut)}
+.facets{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem 2.2rem}
+.facet h3{font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:var(--acc);margin:0 0 .3rem;font-family:ui-monospace,Menlo,monospace}
+.facet p{margin:0;color:var(--mut);font-size:15px}
+.facet.wide{grid-column:1/-1}
+.facets+.chips{margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--line)}
 footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
-<a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a class="ia" href="#ic">Iniciação científica (IA)</a><a href="#infra">Infraestrutura e redes</a><a href="#seguranca">Segurança</a><a href="#dados">Dados</a><a href="#software">Software</a><a href="#mesa">Mesa + Caderno</a><a href="#contato">Contato</a>
+<a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a class="ia" href="#ic">Iniciação científica</a><a href="#infra">Infraestrutura e redes</a><a href="#seguranca">Segurança</a><a href="#dados">Dados</a><a href="#software">Software</a><a href="#mesa">Mesa + Caderno</a><a href="#contato">Contato</a>
 </div></nav>
 
 <header><div class="wrap">
@@ -89,11 +94,11 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="sobre">
 <h2>Sobre</h2>
-<p class="sub">Estudante de Engenharia de Computação no CEFET/RJ (Petrópolis), 6º período, conclusão prevista para 2028.2. Gosto de entender um sistema de ponta a ponta: do banco de dados e da rede até a interface, passando por dados, segurança e inteligência artificial.</p>
-<p class="sub">Tenho experiência prática em dados e desenvolvimento full stack no BTG Pactual e em projetos próprios, um laboratório de redes e servidores Linux e uma iniciação científica que une segurança e IA. Fortinet NSE 1 e NSE 2, Cisco CCNA em preparação e participação no CTF do CEFET/RJ.</p>
+<p class="sub">Estudante de Engenharia de Computação no CEFET/RJ (Petrópolis), 6º período, conclusão prevista para 2028.2. Gosto de entender um sistema de ponta a ponta: do banco de dados e da rede até a interface, passando por dados, segurança e modelos de linguagem (LLMs).</p>
+<p class="sub">Tenho experiência prática em dados e desenvolvimento full stack no BTG Pactual e em projetos próprios, um laboratório de redes e servidores Linux e uma iniciação científica que une segurança e LLMs. Fortinet NSE 1 e NSE 2, Cisco CCNA em preparação e participação no CTF do CEFET/RJ.</p>
 <p class="sub">Perfil completo no <a href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3"><b>LinkedIn</b></a> e código no <a href="https://github.com/JoseRenato21"><b>GitHub</b></a>.</p>
 <div class="chips">
-<span class="chip">Python</span><span class="chip">SQL</span><span class="chip">dbt</span><span class="chip">Node.js</span><span class="chip">React</span><span class="chip">C</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Linux</span><span class="chip">Redes</span><span class="chip">Segurança</span><span class="chip">IA</span>
+<span class="chip">Python</span><span class="chip">SQL</span><span class="chip">dbt</span><span class="chip">Node.js</span><span class="chip">React</span><span class="chip">C</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Linux</span><span class="chip">Redes</span><span class="chip">Segurança</span><span class="chip">LLMs</span>
 </div>
 </section>
 
@@ -255,18 +260,29 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="infra">
 <h2>Infraestrutura e redes</h2>
-<p class="sub">Um laboratório próprio de máquinas virtuais que monto e remonto conforme o cenário pede, com servidores Linux configurados do zero, acesso remoto seguro, VPN e monitoramento.</p>
+<p class="sub">Monto laboratórios de redes e servidores em máquinas virtuais, do zero e de forma reproduzível: cada serviço é instalado, configurado, protegido e monitorado, em redes isoladas que posso desfazer e refazer a cada teste.</p>
 <div class="card big">
-<p class="t"><b>Base do laboratório.</b> Preparo de VMs em VirtualBox e UTM, redes host-only e NAT, resolução de nomes local com <code>/etc/hosts</code> e snapshots limpos para repetir qualquer teste.</p>
-<p class="t"><b>Acesso remoto e túneis.</b> SSH com login por senha, <code>scp</code> e <code>sftp</code>; autenticação por chave pública; endurecimento do servidor com acesso somente por chave, sem login de root e com <code>ufw limit</code> contra força bruta; aplicativos gráficos pela rede com X11 forwarding; túnel local com encaminhamento de portas; e área de trabalho remota com VNC. Em laboratórios maiores, Tailscale como rede overlay entre máquinas.</p>
-<p class="t"><b>Ferramentas de rede com Netcat.</b> Chat e transferência de arquivos, varredura de portas e ponte entre UDP e TCP, para entender o tráfego na base, sem depender de aplicação pronta.</p>
-<p class="t"><b>Serviços de internet em Linux.</b> Servidor FTP com ProFTPD; DNS autoritativo com Bind9 e diagnóstico com <code>dig</code>, <code>nslookup</code> e <code>delv</code>; servidor web Apache em HTTP e em HTTPS com certificado; e e-mail completo com Postfix (envio) e Dovecot (entrega e leitura).</p>
-<p class="t"><b>Proxy com Squid.</b> Instalação, autenticação por usuário e senha, filtro por IP e por MAC, bloqueio de sites e por horário, e hierarquia de proxy pai e filho, incluindo cenários completos com login.</p>
-<p class="t"><b>VPN.</b> OpenVPN em servidor Linux e OpenVPN no <b>pfSense</b>, com emissão de certificados e clientes.</p>
-<p class="t"><b>Monitoramento com Zabbix.</b> Servidor e frontend, cadastro de hosts com agente, monitoramento do gateway por ICMP, alerta quando uma porta ou serviço sai do ar e verificação de integridade de arquivos.</p>
-<p class="t"><b>Cenários combinados.</b> Proxy completo, proxy pai e filho com login e servidor monitorado de ponta a ponta, juntando vários desses serviços numa mesma rede.</p>
-<p class="t"><b>Redes e roteamento.</b> Sub-redes IPv4 e IPv6 (CIDR e VLSM), VLANs, RIP, OSPF e BGP, DHCP, NAT e SD-WAN, praticados em Cisco Packet Tracer e Boson NetSim com Cisco IOS e em preparação para o CCNA.</p>
-<div class="chips"><span class="chip">SSH</span><span class="chip">Túneis</span><span class="chip">OpenVPN</span><span class="chip">pfSense</span><span class="chip">Zabbix</span><span class="chip">Squid</span><span class="chip">Bind9</span><span class="chip">Apache</span><span class="chip">Postfix</span><span class="chip">Dovecot</span><span class="chip">ProFTPD</span><span class="chip">Netcat</span><span class="chip">VNC</span><span class="chip">ufw / iptables</span><span class="chip">Tailscale</span><span class="chip">VirtualBox</span><span class="chip">UTM</span><span class="chip">Cisco IOS</span></div>
+<div class="facets">
+<div class="facet"><h3>Base do laboratório</h3>
+<p>Máquinas virtuais em VirtualBox e UTM, redes host-only e NAT, resolução de nomes local e snapshots para voltar ao estado limpo antes de cada experimento.</p></div>
+<div class="facet"><h3>Acesso remoto seguro</h3>
+<p>SSH com senha e com chave pública, <code>scp</code> e <code>sftp</code>, servidor endurecido (somente chave, sem login de root, <code>ufw limit</code> contra força bruta), aplicativos gráficos por X11 forwarding, túneis com encaminhamento de portas e área de trabalho remota com VNC. Em laboratórios maiores, Tailscale como rede overlay.</p></div>
+<div class="facet"><h3>Serviços de internet</h3>
+<p>DNS com Bind9 e diagnóstico com <code>dig</code>, <code>nslookup</code> e <code>delv</code>, servidor web Apache em HTTP e HTTPS com certificado, e-mail completo com Postfix e Dovecot e FTP com ProFTPD.</p></div>
+<div class="facet"><h3>Proxy e controle de acesso</h3>
+<p>Squid com autenticação por usuário e senha, filtros por IP e MAC, bloqueio de sites e por horário e hierarquia de proxy pai e filho.</p></div>
+<div class="facet"><h3>VPN e firewall</h3>
+<p>OpenVPN em servidor Linux e no <b>pfSense</b>, com certificados e clientes, e regras de firewall com iptables e ufw.</p></div>
+<div class="facet"><h3>Monitoramento</h3>
+<p>Zabbix com servidor, frontend e agentes, monitoramento do gateway por ICMP, alertas quando uma porta ou serviço sai do ar e verificação de integridade de arquivos.</p></div>
+<div class="facet"><h3>Diagnóstico de rede</h3>
+<p>Netcat para chat, transferência de arquivos, varredura de portas e ponte entre UDP e TCP, para enxergar o tráfego na base, sem depender de aplicação pronta.</p></div>
+<div class="facet"><h3>Roteamento e redes corporativas</h3>
+<p>Sub-redes IPv4 e IPv6 (CIDR e VLSM), VLANs, RIP, OSPF e BGP, DHCP, NAT e SD-WAN, praticados em Cisco Packet Tracer e Boson NetSim com Cisco IOS, em preparação para o CCNA.</p></div>
+<div class="facet wide"><h3>Cenários integrados</h3>
+<p>Proxy completo, proxy pai e filho com login e servidor monitorado de ponta a ponta, combinando vários desses serviços na mesma rede.</p></div>
+</div>
+<div class="chips"><span class="chip">SSH</span><span class="chip">Túneis</span><span class="chip">OpenVPN</span><span class="chip">pfSense</span><span class="chip">Zabbix</span><span class="chip">Squid</span><span class="chip">Bind9</span><span class="chip">Apache</span><span class="chip">Postfix</span><span class="chip">Dovecot</span><span class="chip">ProFTPD</span><span class="chip">Netcat</span><span class="chip">VNC</span><span class="chip">Tailscale</span><span class="chip">VirtualBox</span><span class="chip">UTM</span><span class="chip">Cisco IOS</span></div>
 </div>
 </section>
 
@@ -298,9 +314,10 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 <div class="card"><h3>Data lake na AWS</h3>
 <p>No BTG Pactual, a coleta de dados da B3 foi automatizada com RPA no lugar da extração manual. Os dados seguiam para um bucket S3, organizados para consulta em SQL pelo Amazon Athena, e alimentavam tabelas e dashboards com indicadores calculados.</p>
 <div class="chips"><span class="chip">S3</span><span class="chip">Athena</span><span class="chip">SQL</span><span class="chip">RPA</span></div></div>
-<div class="card"><h3>Modelagem relacional e regras no banco</h3>
-<p>No portal acadêmico, o domínio (alunos, professores, cursos, turmas, inscrições e notas) foi modelado em MySQL com triggers que calculam a média, decidem a fila de inscrição e encerram turmas gerando o histórico. Relatórios por aluno, professor e turma consomem essas tabelas.</p>
-<div class="chips"><span class="chip">MySQL</span><span class="chip">Triggers</span><span class="chip">Procedures</span><span class="chip">Consultas analíticas</span></div>
+<div class="card"><h3>Banco de dados: regras que o próprio banco garante</h3>
+<p>No portal acadêmico, modelei em MySQL alunos, professores, cursos, períodos, turmas, inscrições, notas e histórico. A lógica de negócio ficou em triggers: cada inscrição passa por sete validações, a fila de vagas dá prioridade a quem mais tentou o curso, a média é calculada sozinha e encerrar uma turma gera o histórico de cada aluno.</p>
+<p>Como as regras vivem no banco, nenhum cliente consegue gravar um dado inconsistente. Relatórios por aluno, professor e turma consomem essas tabelas.</p>
+<div class="chips"><span class="chip">MySQL</span><span class="chip">Triggers</span><span class="chip">Modelagem relacional</span><span class="chip">Consultas analíticas</span></div>
 <p><a href="https://github.com/JoseRenato21/Projeto_Portal_Academico">Código no GitHub →</a></p></div>
 </div>
 </section>
