@@ -84,13 +84,13 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 </head>
 <body>
 <nav><div class="wrap">
-<a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a class="ia" href="#ic">Iniciação científica</a><a href="#infra">Infraestrutura e redes</a><a href="#seguranca">Segurança</a><a href="#dados">Dados</a><a href="#software">Software</a><a href="#contato">Contato</a>
+<a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a href="#dados">Dados</a><a href="#software">Desenvolvimento</a><a class="ia" href="#ic">Iniciação científica</a><a href="#seguranca">Segurança</a><a href="#infra">Redes</a><a href="#contato">Contato</a>
 </div></nav>
 
 <header><div class="wrap">
 <div class="tag">// engenharia de computação · cefet/rj</div>
 <h1>José Renato Araújo Pereira</h1>
-<p class="lead">Estudante de Engenharia de Computação em busca de estágio. Venho estudando e construindo projetos em desenvolvimento, dados, redes, segurança e LLMs, áreas pelas quais tenho muito interesse.</p>
+<p class="lead">Estudante de Engenharia de Computação em busca de estágio. Venho estudando e construindo projetos em dados, desenvolvimento, LLMs, segurança e redes, áreas pelas quais tenho muito interesse e nas quais quero continuar aprendendo.</p>
 <div class="links">
 <a class="btn p" href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">LinkedIn: jose-renato-araujo-pereira</a>
 <a class="btn p" href="https://github.com/JoseRenato21">GitHub: JoseRenato21</a>
@@ -102,15 +102,15 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="sobre">
 <h2>Sobre</h2>
-<p class="lead-p">Sou estudante de Engenharia de Computação e o que me move é entender um sistema de ponta a ponta. Venho estudando, com muito interesse, desenvolvimento de software, dados, redes, segurança da informação e modelos de linguagem (LLMs), e procuro um estágio em que eu possa aprender e contribuir nessas áreas.</p>
-<p class="lead-p two">Gosto de aprender na prática: construo projetos, monto laboratórios e transformo o que estudo em algo que funciona. A iniciação científica reúne dois desses interesses, segurança e LLMs, e o CCNA é o próximo passo para aprofundar redes.</p>
+<p class="lead-p">Sou estudante de Engenharia de Computação e o que me move é entender um sistema de ponta a ponta. Venho estudando, com muito interesse, dados, desenvolvimento de software, modelos de linguagem (LLMs), segurança da informação e redes, e procuro um estágio em que eu possa aprender e contribuir em qualquer uma delas.</p>
+<p class="lead-p two">Gosto de aprender na prática: construo projetos, monto laboratórios e transformo o que estudo em algo que funciona. Por isso estou aberto a dados, desenvolvimento, LLMs, segurança e redes, e me adapto rápido a áreas novas. A iniciação científica reúne dois desses interesses, LLMs e segurança.</p>
 <div class="facts-title">Áreas que venho estudando</div>
 <dl class="facts">
-<div class="fact"><dt>Desenvolvimento</dt><dd>Node.js, React, Python e arquitetura de software</dd></div>
 <div class="fact"><dt>Dados</dt><dd>SQL, pipelines, dbt e AWS</dd></div>
+<div class="fact"><dt>Desenvolvimento</dt><dd>Node.js, React, Python e arquitetura de software</dd></div>
 <div class="fact"><dt>LLMs</dt><dd>Modelos locais com Ollama e fine-tuning</dd></div>
-<div class="fact"><dt>Redes</dt><dd>Linux, serviços de rede, VPN e CCNA</dd></div>
 <div class="fact"><dt>Segurança</dt><dd>Defesa, honeypots, Suricata e CTF</dd></div>
+<div class="fact"><dt>Redes</dt><dd>Linux, serviços de rede, VPN e CCNA</dd></div>
 <div class="fact"><dt>Formação</dt><dd>Engenharia de Computação, CEFET/RJ · formatura em 2028.2</dd></div>
 </dl>
 </section>
@@ -128,6 +128,55 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 </ul>
 </div>
 <p class="sub" style="margin-top:24px">Formação: Engenharia de Computação, CEFET/RJ (2024.1 – 2028.2). Certificações: Fortinet NSE 1 e 2; Cisco CCNA em preparação (prova prevista para fev/2027); estudo do material do Azure Data Fundamentals. Inglês avançado.</p>
+</section>
+
+<section id="dados">
+<h2>Dados</h2>
+<p class="sub">Estou me aprofundando em engenharia de dados, do dado cru ao indicador: ingestão, modelagem, transformação e testes de qualidade, com a regra de negócio no lugar onde ela é mais segura.</p>
+<div class="grid">
+<div class="card"><h3>Pipeline em arquitetura medalhão</h3>
+<p>Ingestão da API do TMDB em Python, com a resposta guardada crua em PostgreSQL (JSONB) na camada Bronze. Em dbt, a Silver abre o JSON, converte os tipos e remove duplicatas, e a Gold gera ranking de popularidade e resumos por gênero, ano e idioma.</p>
+<p>Inclui 15 testes de qualidade dos dados, Docker Compose para o banco e um Makefile que roda o fluxo completo.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">PostgreSQL</span><span class="chip">JSONB</span><span class="chip">dbt</span><span class="chip">Docker</span></div>
+<p><a href="https://github.com/JoseRenato21/movie-etl-pipeline">Código no GitHub →</a></p></div>
+<div class="card"><h3>Data lake na AWS</h3>
+<p>No BTG Pactual, a coleta de dados da B3 foi automatizada com RPA no lugar da extração manual. Os dados seguiam para um bucket S3, organizados para consulta em SQL pelo Amazon Athena, e alimentavam tabelas e dashboards com indicadores calculados.</p>
+<div class="chips"><span class="chip">S3</span><span class="chip">Athena</span><span class="chip">SQL</span><span class="chip">RPA</span></div></div>
+<div class="card"><h3>Banco de dados: regras que o próprio banco garante</h3>
+<p>No portal acadêmico, modelei em MySQL alunos, professores, cursos, períodos, turmas, inscrições, notas e histórico. A lógica de negócio ficou em triggers: cada inscrição passa por sete validações, a fila de vagas dá prioridade a quem mais tentou o curso, a média é calculada sozinha e encerrar uma turma gera o histórico de cada aluno.</p>
+<p>Como as regras vivem no banco, nenhum cliente consegue gravar um dado inconsistente. Relatórios por aluno, professor e turma consomem essas tabelas.</p>
+<div class="chips"><span class="chip">MySQL</span><span class="chip">Triggers</span><span class="chip">Modelagem relacional</span><span class="chip">Consultas analíticas</span></div>
+<p><a href="https://github.com/JoseRenato21/Projeto_Portal_Academico">Código no GitHub →</a></p></div>
+</div>
+</section>
+
+<section id="software">
+<h2>Desenvolvimento de software</h2>
+<p class="sub">Desenvolvimento é onde junto tudo o que estudo. Gosto de construir aplicações completas, do banco à interface, com camadas bem separadas, regras testadas e documentação.</p>
+<div class="grid">
+<div class="card"><h3>Portal acadêmico</h3>
+<p>Sistema web para inscrições, notas, materiais e relatórios, com três perfis de acesso. Back-end em Node.js e Express dividido em rotas, controllers e services, com mais de 50 endpoints, e interface em React em que o menu e as rotas mudam conforme o perfil do usuário.</p>
+<div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">React</span><span class="chip">MySQL</span></div>
+<p><a href="https://github.com/JoseRenato21/Projeto_Portal_Academico">Código no GitHub →</a></p></div>
+<div class="card"><h3>Booking com DDD e Clean Architecture</h3>
+<p>Reservas de hotel em Python puro. Value Objects imutáveis, entidades, repositórios definidos por contrato e casos de uso, de modo que as regras (conflito de período, capacidade, cancelamento) rodam sem banco e sem framework. Senhas guardadas com PBKDF2 e 75 testes automatizados.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">pytest</span></div>
+<p><a href="https://github.com/JoseRenato21/booking-ddd-clean-arch-python">Código no GitHub →</a></p></div>
+<div class="card"><h3>Arkanoid em Assembly</h3>
+<p>Jogo completo para o processador P3, com movimento da bola dirigido por interrupção de timer, colisão em grade de caracteres, placar de três dígitos, vidas e pausa, tudo com registradores e memória.</p>
+<div class="chips"><span class="chip">Assembly</span><span class="chip">Interrupções</span><span class="chip">Baixo nível</span></div>
+<p><a href="https://github.com/JoseRenato21/Jogo_Arkanoid_Assembly_Simp3">Código no GitHub →</a></p></div>
+<div class="card"><h3>Estudos de C</h3>
+<p>Caderno com um exemplo compilável para cada tópico, de variáveis e operadores a ponteiros, recursão, alocação dinâmica e arquivos, mais exercícios do Beecrowd.</p>
+<div class="chips"><span class="chip">C</span><span class="chip">Ponteiros</span><span class="chip">Recursão</span></div>
+<p><a href="https://github.com/JoseRenato21/Puro-Malte-Estudos">Código no GitHub →</a></p></div>
+<div class="card"><h3>Mesa digitalizadora</h3>
+<p>Transformei um tablet Android com S Pen em mesa digitalizadora para o Mac. O tablet captura a caneta e envia os eventos pelo mesmo Wi-Fi, e um servidor em Python injeta no macOS posição absoluta, pressão, inclinação, clique direito e o botão da caneta como borracha. O app Android foi compilado à mão e encontra o Mac na rede sem precisar digitar IP.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">CoreGraphics</span><span class="chip">WebSocket</span><span class="chip">Android</span></div></div>
+<div class="card"><h3>Caderno digital</h3>
+<p>Caderno próprio para escrever e desenhar, com cadernos e páginas, busca, canetas e cores, texto, imagens, desfazer e refazer, zoom, exportação e backups automáticos. Funciona no Mac e no tablet, sincronizados por um servidor local e protegidos por PIN.</p>
+<div class="chips"><span class="chip">JavaScript</span><span class="chip">Canvas</span><span class="chip">HTTP + WebSocket</span><span class="chip">PIN</span></div></div>
+</div>
 </section>
 
 <section id="ic">
@@ -271,9 +320,25 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 <div class="chips"><span class="chip">LLMs</span><span class="chip">Fine-tuning QLoRA</span><span class="chip">Ollama</span><span class="chip">Qwen3 / Llama 3.2</span><span class="chip">Agentes de IA</span><span class="chip">Cowrie</span><span class="chip">Rouxii</span><span class="chip">Tailscale</span><span class="chip">VirtualBox</span></div>
 </section>
 
+<section id="seguranca">
+<h2>Segurança da informação</h2>
+<p class="sub">Um interesse que só cresce. Estudo defesa em primeiro lugar, com o lado ofensivo para entender como o atacante pensa. A iniciação científica em honeypots com LLMs está detalhada <a href="#ic">na seção acima</a>.</p>
+<div class="grid">
+<div class="card"><h3>Detecção e prevenção de intrusão</h3>
+<p>Firewalls stateful, proxy e NGFW, pfSense e IDS/IPS com Suricata em linha (NFQUEUE), análise de alertas em eve.json e visualização no EveBox.</p>
+<div class="chips"><span class="chip">Suricata</span><span class="chip">pfSense</span><span class="chip">NFQUEUE</span><span class="chip">EveBox</span></div></div>
+<div class="card"><h3>Identidade e criptografia</h3>
+<p>Zero Trust, PKI, MFA, SSO/SAML, RADIUS e 802.1X/EAP. Fortinet NSE 1 e NSE 2 concluídas.</p>
+<div class="chips"><span class="chip">PKI</span><span class="chip">SAML</span><span class="chip">RADIUS</span><span class="chip">802.1X</span></div></div>
+<div class="card"><h3>Ofensiva e CTF</h3>
+<p>Kali Linux, Nmap, Gobuster, Hydra e SQLMap em ambiente controlado. Participação no CTF do CEFET/RJ.</p>
+<div class="chips"><span class="chip">Kali</span><span class="chip">Nmap</span><span class="chip">Hydra</span><span class="chip">SQLMap</span></div></div>
+</div>
+</section>
+
 <section id="infra">
 <h2>Infraestrutura e redes</h2>
-<p class="sub">Redes e servidores Linux estão entre as áreas que mais gosto de estudar. Para aprender de verdade, monto laboratórios em máquinas virtuais, do zero e em redes isoladas que posso desfazer e refazer: cada serviço é instalado, configurado, protegido e monitorado por mim.</p>
+<p class="sub">Redes e servidores Linux são mais uma área que estudo com interesse. Para aprender de verdade, monto laboratórios em máquinas virtuais, do zero e em redes isoladas que posso desfazer e refazer: cada serviço é instalado, configurado, protegido e monitorado por mim.</p>
 <div class="card big">
 <div class="facets">
 <div class="facet"><h3>Base do laboratório</h3>
@@ -299,74 +364,9 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 </div>
 </section>
 
-<section id="seguranca">
-<h2>Segurança da informação</h2>
-<p class="sub">Um interesse que só cresce. Estudo defesa em primeiro lugar, com o lado ofensivo para entender como o atacante pensa. A iniciação científica em honeypots com LLMs está detalhada <a href="#ic">na seção acima</a>.</p>
-<div class="grid">
-<div class="card"><h3>Detecção e prevenção de intrusão</h3>
-<p>Firewalls stateful, proxy e NGFW, pfSense e IDS/IPS com Suricata em linha (NFQUEUE), análise de alertas em eve.json e visualização no EveBox.</p>
-<div class="chips"><span class="chip">Suricata</span><span class="chip">pfSense</span><span class="chip">NFQUEUE</span><span class="chip">EveBox</span></div></div>
-<div class="card"><h3>Identidade e criptografia</h3>
-<p>Zero Trust, PKI, MFA, SSO/SAML, RADIUS e 802.1X/EAP. Fortinet NSE 1 e NSE 2 concluídas.</p>
-<div class="chips"><span class="chip">PKI</span><span class="chip">SAML</span><span class="chip">RADIUS</span><span class="chip">802.1X</span></div></div>
-<div class="card"><h3>Ofensiva e CTF</h3>
-<p>Kali Linux, Nmap, Gobuster, Hydra e SQLMap em ambiente controlado. Participação no CTF do CEFET/RJ.</p>
-<div class="chips"><span class="chip">Kali</span><span class="chip">Nmap</span><span class="chip">Hydra</span><span class="chip">SQLMap</span></div></div>
-</div>
-</section>
-
-<section id="dados">
-<h2>Dados</h2>
-<p class="sub">Estou me aprofundando em engenharia de dados, do dado cru ao indicador: ingestão, modelagem, transformação e testes de qualidade, com a regra de negócio no lugar onde ela é mais segura.</p>
-<div class="grid">
-<div class="card"><h3>Pipeline em arquitetura medalhão</h3>
-<p>Ingestão da API do TMDB em Python, com a resposta guardada crua em PostgreSQL (JSONB) na camada Bronze. Em dbt, a Silver abre o JSON, converte os tipos e remove duplicatas, e a Gold gera ranking de popularidade e resumos por gênero, ano e idioma.</p>
-<p>Inclui 15 testes de qualidade dos dados, Docker Compose para o banco e um Makefile que roda o fluxo completo.</p>
-<div class="chips"><span class="chip">Python</span><span class="chip">PostgreSQL</span><span class="chip">JSONB</span><span class="chip">dbt</span><span class="chip">Docker</span></div>
-<p><a href="https://github.com/JoseRenato21/movie-etl-pipeline">Código no GitHub →</a></p></div>
-<div class="card"><h3>Data lake na AWS</h3>
-<p>No BTG Pactual, a coleta de dados da B3 foi automatizada com RPA no lugar da extração manual. Os dados seguiam para um bucket S3, organizados para consulta em SQL pelo Amazon Athena, e alimentavam tabelas e dashboards com indicadores calculados.</p>
-<div class="chips"><span class="chip">S3</span><span class="chip">Athena</span><span class="chip">SQL</span><span class="chip">RPA</span></div></div>
-<div class="card"><h3>Banco de dados: regras que o próprio banco garante</h3>
-<p>No portal acadêmico, modelei em MySQL alunos, professores, cursos, períodos, turmas, inscrições, notas e histórico. A lógica de negócio ficou em triggers: cada inscrição passa por sete validações, a fila de vagas dá prioridade a quem mais tentou o curso, a média é calculada sozinha e encerrar uma turma gera o histórico de cada aluno.</p>
-<p>Como as regras vivem no banco, nenhum cliente consegue gravar um dado inconsistente. Relatórios por aluno, professor e turma consomem essas tabelas.</p>
-<div class="chips"><span class="chip">MySQL</span><span class="chip">Triggers</span><span class="chip">Modelagem relacional</span><span class="chip">Consultas analíticas</span></div>
-<p><a href="https://github.com/JoseRenato21/Projeto_Portal_Academico">Código no GitHub →</a></p></div>
-</div>
-</section>
-
-<section id="software">
-<h2>Desenvolvimento de software</h2>
-<p class="sub">Desenvolvimento é onde junto tudo o que estudo. Gosto de construir aplicações completas, do banco à interface, com camadas bem separadas, regras testadas e documentação.</p>
-<div class="grid">
-<div class="card"><h3>Portal acadêmico</h3>
-<p>Sistema web para inscrições, notas, materiais e relatórios, com três perfis de acesso. Back-end em Node.js e Express dividido em rotas, controllers e services, com mais de 50 endpoints, e interface em React em que o menu e as rotas mudam conforme o perfil do usuário.</p>
-<div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">React</span><span class="chip">MySQL</span></div>
-<p><a href="https://github.com/JoseRenato21/Projeto_Portal_Academico">Código no GitHub →</a></p></div>
-<div class="card"><h3>Booking com DDD e Clean Architecture</h3>
-<p>Reservas de hotel em Python puro. Value Objects imutáveis, entidades, repositórios definidos por contrato e casos de uso, de modo que as regras (conflito de período, capacidade, cancelamento) rodam sem banco e sem framework. Senhas guardadas com PBKDF2 e 75 testes automatizados.</p>
-<div class="chips"><span class="chip">Python</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">pytest</span></div>
-<p><a href="https://github.com/JoseRenato21/booking-ddd-clean-arch-python">Código no GitHub →</a></p></div>
-<div class="card"><h3>Arkanoid em Assembly</h3>
-<p>Jogo completo para o processador P3, com movimento da bola dirigido por interrupção de timer, colisão em grade de caracteres, placar de três dígitos, vidas e pausa, tudo com registradores e memória.</p>
-<div class="chips"><span class="chip">Assembly</span><span class="chip">Interrupções</span><span class="chip">Baixo nível</span></div>
-<p><a href="https://github.com/JoseRenato21/Jogo_Arkanoid_Assembly_Simp3">Código no GitHub →</a></p></div>
-<div class="card"><h3>Estudos de C</h3>
-<p>Caderno com um exemplo compilável para cada tópico, de variáveis e operadores a ponteiros, recursão, alocação dinâmica e arquivos, mais exercícios do Beecrowd.</p>
-<div class="chips"><span class="chip">C</span><span class="chip">Ponteiros</span><span class="chip">Recursão</span></div>
-<p><a href="https://github.com/JoseRenato21/Puro-Malte-Estudos">Código no GitHub →</a></p></div>
-<div class="card"><h3>Mesa digitalizadora</h3>
-<p>Transformei um tablet Android com S Pen em mesa digitalizadora para o Mac. O tablet captura a caneta e envia os eventos pelo mesmo Wi-Fi, e um servidor em Python injeta no macOS posição absoluta, pressão, inclinação, clique direito e o botão da caneta como borracha. O app Android foi compilado à mão e encontra o Mac na rede sem precisar digitar IP.</p>
-<div class="chips"><span class="chip">Python</span><span class="chip">CoreGraphics</span><span class="chip">WebSocket</span><span class="chip">Android</span></div></div>
-<div class="card"><h3>Caderno digital</h3>
-<p>Caderno próprio para escrever e desenhar, com cadernos e páginas, busca, canetas e cores, texto, imagens, desfazer e refazer, zoom, exportação e backups automáticos. Funciona no Mac e no tablet, sincronizados por um servidor local e protegidos por PIN.</p>
-<div class="chips"><span class="chip">JavaScript</span><span class="chip">Canvas</span><span class="chip">HTTP + WebSocket</span><span class="chip">PIN</span></div></div>
-</div>
-</section>
-
 <section id="contato">
 <h2>Contato</h2>
-<p class="sub">Procuro um estágio em que eu possa continuar aprendendo e contribuir em desenvolvimento, dados, redes, segurança ou LLMs.</p>
+<p class="sub">Procuro um estágio em que eu possa continuar aprendendo e contribuir em dados, desenvolvimento, LLMs, segurança ou redes.</p>
 <div class="links">
 <a class="btn p" href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3</a>
 <a class="btn p" href="mailto:jsernt21@gmail.com">jsernt21@gmail.com</a>
