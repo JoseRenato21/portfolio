@@ -266,29 +266,6 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 <p class="t"><b>Monitoramento com Zabbix.</b> Servidor e frontend, cadastro de hosts com agente, monitoramento do gateway por ICMP, alerta quando uma porta ou serviço sai do ar e verificação de integridade de arquivos.</p>
 <p class="t"><b>Cenários combinados.</b> Proxy completo, proxy pai e filho com login e servidor monitorado de ponta a ponta, juntando vários desses serviços numa mesma rede.</p>
 <p class="t"><b>Redes e roteamento.</b> Sub-redes IPv4 e IPv6 (CIDR e VLSM), VLANs, RIP, OSPF e BGP, DHCP, NAT e SD-WAN, praticados em Cisco Packet Tracer e Boson NetSim com Cisco IOS e em preparação para o CCNA.</p>
-<h4>Ferramentas e agentes que montam laboratórios isolados</h4>
-<p class="t">Em vez de configurar cada laboratório na mão, eu crio <b>ferramentas e agentes que montam o ambiente a partir de uma descrição</b>: quantas máquinas, qual sistema, quais redes, quais serviços. O método é o mesmo para qualquer cenário de rede, seja um túnel, uma VPN, um firewall ou um servidor monitorado.</p>
-<figure class="fig">
-<svg viewBox="0 0 900 170" role="img" aria-label="Fluxo de criação automática de um laboratório isolado">
-<defs><marker id="v1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--d-ia-line)"/></marker></defs>
-<rect class="bx" x="8" y="34" width="150" height="70" rx="10"/><text class="t1" x="83" y="64" text-anchor="middle">Descrição</text><text class="t2 m" x="83" y="84" text-anchor="middle">máquinas, redes, serviços</text>
-<rect class="ia" x="195" y="34" width="150" height="70" rx="10"/><text class="t1" x="270" y="64" text-anchor="middle">Agente</text><text class="t2 m" x="270" y="84" text-anchor="middle">cria e configura</text>
-<rect class="bx" x="383" y="34" width="150" height="70" rx="10"/><text class="t1" x="458" y="64" text-anchor="middle">VMs isoladas</text><text class="t2 m" x="458" y="84" text-anchor="middle">VirtualBox · UTM</text>
-<rect class="bx" x="570" y="34" width="150" height="70" rx="10"/><text class="t1" x="645" y="64" text-anchor="middle">Validação</text><text class="t2 m" x="645" y="84" text-anchor="middle">ping, portas, serviços</text>
-<rect class="ok" x="745" y="34" width="147" height="70" rx="10"/><text class="t1" x="818" y="64" text-anchor="middle">Snapshot limpo</text><text class="t2 m" x="818" y="84" text-anchor="middle">volta ao zero</text>
-<path class="ar2" d="M158 69H193" marker-end="url(#v1)"/><path class="ar2" d="M345 69H381" marker-end="url(#v1)"/><path class="ar2" d="M533 69H568" marker-end="url(#v1)"/><path class="ar2" d="M720 69H743" marker-end="url(#v1)"/>
-<path class="ar3" d="M645 106V140H270V106" marker-end="url(#v1)"/>
-<text class="t2" x="458" y="158" text-anchor="middle">falhou: o agente identifica o tipo de erro, aplica o tratamento e refaz o passo</text>
-</svg>
-<figcaption>Do pedido ao ambiente pronto, com verificação e tratamento de erro em cada etapa.</figcaption>
-</figure>
-<ul>
-<li><b>Criação por script:</b> VMs criadas pela linha de comando (<code>VBoxManage</code>), rede host-only com IP fixo (netplan ou NetworkManager), SSH de administração em porta separada e serviços instalados por pacote.</li>
-<li><b>Isolamento por padrão:</b> o adaptador NAT só fica ligado durante a instalação de pacotes e é removido depois; o que precisa de acesso externo passa por rede overlay (Tailscale) com firewall liberando só a porta necessária.</li>
-<li><b>Agente que opera as máquinas:</b> comandos executados dentro das VMs por <code>guestcontrol</code>, com a senha lida de arquivo, sem digitar em prompt interativo, e mudanças feitas só depois de um snapshot.</li>
-<li><b>Tratamento por tipo de erro:</b> cada falha real que apareceu virou uma regra. Exemplos: VM travando no boot porque o controlador SATA vinha com 30 portas (corrigido para 1 no script); Ollama perdendo o bind após reiniciar (variável de ambiente definida antes de qualquer comando); encaminhamento de porta que não sobrevive a reboot (serviço systemd); sessão SSH que fecha antes da resposta lenta (teste em modo interativo).</li>
-<li><b>Reprodutibilidade:</b> o laboratório é descrito em roteiros e scripts versionados, então qualquer pessoa recria o mesmo ambiente do zero.</li>
-</ul>
 <div class="chips"><span class="chip">SSH</span><span class="chip">Túneis</span><span class="chip">OpenVPN</span><span class="chip">pfSense</span><span class="chip">Zabbix</span><span class="chip">Squid</span><span class="chip">Bind9</span><span class="chip">Apache</span><span class="chip">Postfix</span><span class="chip">Dovecot</span><span class="chip">ProFTPD</span><span class="chip">Netcat</span><span class="chip">VNC</span><span class="chip">ufw / iptables</span><span class="chip">Tailscale</span><span class="chip">VirtualBox</span><span class="chip">UTM</span><span class="chip">Cisco IOS</span></div>
 </div>
 </section>
