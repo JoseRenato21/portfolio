@@ -71,6 +71,12 @@ th{color:var(--mut);font-weight:600;font-size:12px;letter-spacing:.04em;text-tra
 .facet p{margin:0;color:var(--mut);font-size:15px}
 .facet.wide{grid-column:1/-1}
 .facets+.chips{margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--line)}
+.lead-p{font-size:19px;line-height:1.65;max-width:780px;margin:0 0 1.6rem;color:var(--fg)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 1.4rem}
+@media(max-width:640px){.facts{grid-template-columns:repeat(2,1fr)}}
+.fact{background:var(--card);padding:14px 16px}
+.fact dt{font:11px ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin:0 0 3px}
+.fact dd{margin:0;font-size:15px;color:var(--fg)}
 footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
 </style>
 </head>
@@ -94,13 +100,16 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="sobre">
 <h2>Sobre</h2>
-<p class="sub">Sou estudante de Engenharia de Computação no CEFET/RJ (Petrópolis), no 6º período, com formatura prevista para 2028.2. Gosto de ver como as partes de um sistema se encaixam, do banco de dados e da rede até a interface, e de construir cada uma delas.</p>
-<p class="sub">Na prática, já trabalhei com um data lake na AWS no BTG Pactual, desenvolvi aplicações completas em Node.js, React e Python, montei do zero um laboratório de redes e servidores Linux e participo de uma iniciação científica que combina segurança e modelos de linguagem (LLMs).</p>
-<p class="sub">Tenho as certificações Fortinet NSE 1 e NSE 2, estou me preparando para o Cisco CCNA e participei do CTF do CEFET/RJ.</p>
+<p class="lead-p">Sou estudante de Engenharia de Computação e gosto de ver como as partes de um sistema se encaixam, do banco de dados e da rede até a interface. Na prática, isso virou um data lake na AWS, aplicações completas em Node.js, React e Python, um laboratório de redes e uma pesquisa que une segurança e modelos de linguagem (LLMs).</p>
+<dl class="facts">
+<div class="fact"><dt>Formação</dt><dd>Engenharia de Computação, CEFET/RJ · 6º período</dd></div>
+<div class="fact"><dt>Formatura</dt><dd>2028.2</dd></div>
+<div class="fact"><dt>Experiência</dt><dd>BTG Pactual · Summer Job em Tecnologia</dd></div>
+<div class="fact"><dt>Certificações</dt><dd>Fortinet NSE 1 e NSE 2</dd></div>
+<div class="fact"><dt>Em preparação</dt><dd>Cisco CCNA · prova em fev/2027</dd></div>
+<div class="fact"><dt>Atividades</dt><dd>CTF do CEFET/RJ</dd></div>
+</dl>
 <p class="sub">Perfil completo no <a href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3"><b>LinkedIn</b></a> e código no <a href="https://github.com/JoseRenato21"><b>GitHub</b></a>.</p>
-<div class="chips">
-<span class="chip">Python</span><span class="chip">SQL</span><span class="chip">dbt</span><span class="chip">Node.js</span><span class="chip">React</span><span class="chip">C</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Linux</span><span class="chip">Redes</span><span class="chip">Segurança</span><span class="chip">LLMs</span>
-</div>
 </section>
 
 <section id="exp">
