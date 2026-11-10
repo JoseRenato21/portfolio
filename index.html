@@ -77,6 +77,8 @@ th{color:var(--mut);font-weight:600;font-size:12px;letter-spacing:.04em;text-tra
 .fact{background:var(--card);padding:14px 16px}
 .fact dt{font:11px ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin:0 0 3px}
 .fact dd{margin:0;font-size:15px;color:var(--fg)}
+.lead-p.two{margin-top:-.6rem;color:var(--mut)}
+.facts-title{font:11px ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:0 0 .6rem}
 footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
 </style>
 </head>
@@ -88,7 +90,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 <header><div class="wrap">
 <div class="tag">// engenharia de computação · cefet/rj</div>
 <h1>José Renato Araújo Pereira</h1>
-<p class="lead">Construo e protejo infraestrutura, transformo dado bruto em informação e desenvolvo aplicações completas. Interesse em dados e segurança da informação, com laboratório próprio de redes e servidores.</p>
+<p class="lead">Estudante de Engenharia de Computação em busca de estágio. Venho estudando e construindo projetos em desenvolvimento, dados, redes, segurança e LLMs, áreas pelas quais tenho muito interesse.</p>
 <div class="links">
 <a class="btn p" href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">LinkedIn: jose-renato-araujo-pereira</a>
 <a class="btn p" href="https://github.com/JoseRenato21">GitHub: JoseRenato21</a>
@@ -100,14 +102,16 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="sobre">
 <h2>Sobre</h2>
-<p class="lead-p">Sou estudante de Engenharia de Computação e gosto de ver como as partes de um sistema se encaixam, do banco de dados e da rede até a interface. Na prática, isso virou um data lake na AWS, aplicações completas em Node.js, React e Python, um laboratório de redes e uma pesquisa que une segurança e modelos de linguagem (LLMs).</p>
+<p class="lead-p">Sou estudante de Engenharia de Computação e o que me move é entender um sistema de ponta a ponta. Venho estudando, com muito interesse, desenvolvimento de software, dados, redes, segurança da informação e modelos de linguagem (LLMs), e procuro um estágio em que eu possa aprender e contribuir nessas áreas.</p>
+<p class="lead-p two">Gosto de aprender na prática: construo projetos, monto laboratórios e transformo o que estudo em algo que funciona. A iniciação científica reúne dois desses interesses, segurança e LLMs, e o CCNA é o próximo passo para aprofundar redes.</p>
+<div class="facts-title">Áreas que venho estudando</div>
 <dl class="facts">
-<div class="fact"><dt>Formação</dt><dd>Engenharia de Computação, CEFET/RJ · 6º período</dd></div>
-<div class="fact"><dt>Formatura</dt><dd>2028.2</dd></div>
-<div class="fact"><dt>Experiência</dt><dd>BTG Pactual · Summer Job em Tecnologia</dd></div>
-<div class="fact"><dt>Certificações</dt><dd>Fortinet NSE 1 e NSE 2</dd></div>
-<div class="fact"><dt>Em preparação</dt><dd>Cisco CCNA · prova em fev/2027</dd></div>
-<div class="fact"><dt>Atividades</dt><dd>CTF do CEFET/RJ</dd></div>
+<div class="fact"><dt>Desenvolvimento</dt><dd>Node.js, React, Python e arquitetura de software</dd></div>
+<div class="fact"><dt>Dados</dt><dd>SQL, pipelines, dbt e AWS</dd></div>
+<div class="fact"><dt>LLMs</dt><dd>Modelos locais com Ollama e fine-tuning</dd></div>
+<div class="fact"><dt>Redes</dt><dd>Linux, serviços de rede, VPN e CCNA</dd></div>
+<div class="fact"><dt>Segurança</dt><dd>Defesa, honeypots, Suricata e CTF</dd></div>
+<div class="fact"><dt>Formação</dt><dd>Engenharia de Computação, CEFET/RJ · formatura em 2028.2</dd></div>
 </dl>
 <p class="sub">Perfil completo no <a href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3"><b>LinkedIn</b></a> e código no <a href="https://github.com/JoseRenato21"><b>GitHub</b></a>.</p>
 </section>
@@ -129,7 +133,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="ic">
 <h2>Iniciação científica: Threat Ranger</h2>
-<p class="sub">Honeypots cujas respostas são geradas por LLMs e que aprendem sozinhos a não ser detectados por atacantes de IA. Iniciação científica no CEFET/RJ, com orientador.</p>
+<p class="sub">Uma pesquisa que reúne dois dos meus maiores interesses, segurança e LLMs: honeypots cujas respostas são geradas por modelos de linguagem e que aprendem sozinhos a não ser detectados por atacantes automatizados. Iniciação científica no CEFET/RJ, com orientador.</p>
 
 <h4>O problema</h4>
 <p class="t">Atacantes autônomos baseados em IA já são realidade. O paper <b>Rouxii</b> (arXiv 2609.26555) mostrou que um deles, instruído a desconfiar de armadilhas, desmascara o honeypot SSH mais usado do mundo, o <b>Cowrie</b>, muitas vezes antes de digitar um comando. A pergunta da pesquisa: <b>como um honeypot aprende, sozinho, o que o denuncia e se corrige?</b></p>
@@ -270,7 +274,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="infra">
 <h2>Infraestrutura e redes</h2>
-<p class="sub">Monto laboratórios de redes e servidores em máquinas virtuais, do zero e de forma reproduzível: cada serviço é instalado, configurado, protegido e monitorado, em redes isoladas que posso desfazer e refazer a cada teste.</p>
+<p class="sub">Redes e servidores Linux estão entre as áreas que mais gosto de estudar. Para aprender de verdade, monto laboratórios em máquinas virtuais, do zero e em redes isoladas que posso desfazer e refazer: cada serviço é instalado, configurado, protegido e monitorado por mim.</p>
 <div class="card big">
 <div class="facets">
 <div class="facet"><h3>Base do laboratório</h3>
@@ -298,7 +302,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="seguranca">
 <h2>Segurança da informação</h2>
-<p class="sub">Defesa em primeiro lugar, com o lado ofensivo para entender como o atacante pensa. A iniciação científica em honeypots com IA está detalhada <a href="#ic">na seção acima</a>.</p>
+<p class="sub">Um interesse que só cresce. Estudo defesa em primeiro lugar, com o lado ofensivo para entender como o atacante pensa. A iniciação científica em honeypots com LLMs está detalhada <a href="#ic">na seção acima</a>.</p>
 <div class="grid">
 <div class="card"><h3>Detecção e prevenção de intrusão</h3>
 <p>Firewalls stateful, proxy e NGFW, pfSense e IDS/IPS com Suricata em linha (NFQUEUE), análise de alertas em eve.json e visualização no EveBox.</p>
@@ -314,7 +318,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="dados">
 <h2>Dados</h2>
-<p class="sub">Do dado cru ao indicador: ingestão, modelagem, transformação e testes de qualidade, com a regra de negócio no lugar onde ela é mais segura.</p>
+<p class="sub">Estou me aprofundando em engenharia de dados, do dado cru ao indicador: ingestão, modelagem, transformação e testes de qualidade, com a regra de negócio no lugar onde ela é mais segura.</p>
 <div class="grid">
 <div class="card"><h3>Pipeline em arquitetura medalhão</h3>
 <p>Ingestão da API do TMDB em Python, com a resposta guardada crua em PostgreSQL (JSONB) na camada Bronze. Em dbt, a Silver abre o JSON, converte os tipos e remove duplicatas, e a Gold gera ranking de popularidade e resumos por gênero, ano e idioma.</p>
@@ -334,7 +338,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="software">
 <h2>Desenvolvimento de software</h2>
-<p class="sub">Aplicações completas, do banco à interface, com camadas bem separadas, regras testadas e documentação.</p>
+<p class="sub">Desenvolvimento é onde junto tudo o que estudo. Gosto de construir aplicações completas, do banco à interface, com camadas bem separadas, regras testadas e documentação.</p>
 <div class="grid">
 <div class="card"><h3>Portal acadêmico</h3>
 <p>Sistema web para inscrições, notas, materiais e relatórios, com três perfis de acesso. Back-end em Node.js e Express dividido em rotas, controllers e services, com mais de 50 endpoints, e interface em React em que o menu e as rotas mudam conforme o perfil do usuário.</p>
@@ -370,7 +374,7 @@ footer{padding:40px 0 60px;color:var(--mut);font-size:14px;border-top:1px solid 
 
 <section id="contato">
 <h2>Contato</h2>
-<p class="sub">Procuro estágio em tecnologia, nas frentes de dados e segurança da informação.</p>
+<p class="sub">Procuro um estágio em que eu possa continuar aprendendo e contribuir em desenvolvimento, dados, redes, segurança ou LLMs.</p>
 <div class="links">
 <a class="btn p" href="https://www.linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3">linkedin.com/in/jose-renato-araujo-pereira-1862912bcc3</a>
 <a class="btn p" href="mailto:jsernt21@gmail.com">jsernt21@gmail.com</a>
